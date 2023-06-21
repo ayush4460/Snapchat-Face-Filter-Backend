@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import QRCode from 'qrcode';
-// import FilterCarousel from './Carousel';
+import axios from 'axios';
 import RedirectedPage from './RedirectedPage';
 import Camera from './Camera';
 
 const App = () => {
-  const uniqueLink = 'http://localhost:8080/redirected'; // Replace with your unique link
+  const uniqueLink = 'http://localhost:3000/redirected';
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -16,7 +16,6 @@ const App = () => {
       window.location.href = uniqueLink;
     }
   }, []);
-
 
   const generateQRCode = () => {
     const qrCodeContainer = document.getElementById('qrcode');
@@ -44,6 +43,7 @@ const App = () => {
 
 const Home = ({ uniqueLink }) => {
   const qrCodeContainerRef = useRef(null);
+  const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
     const qrCodeContainer = qrCodeContainerRef.current;
@@ -53,7 +53,20 @@ const Home = ({ uniqueLink }) => {
         console.error('Error generating QR code:', error);
       }
     });
+
+    getTotalCount();
   }, [uniqueLink]);
+
+  const getTotalCount = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/api/count');
+      const { count } = response.data;
+      console.log(count);
+      setTotalCount(count);
+    } catch (error) {
+      console.error('Error retrieving click count:', error);
+    }
+  };
 
   const redirectToFilters = () => {
     window.location.href = uniqueLink;
@@ -61,12 +74,11 @@ const Home = ({ uniqueLink }) => {
 
   return (
     <div>
-      {/* <Camera/> */}
       <div className="scan-text">Scan the QR code to open the filters page</div>
       <div className="qrcode-container" onClick={redirectToFilters}>
         <canvas ref={qrCodeContainerRef} id="qrcode" />
       </div>
-      {/* <div className="url-text">URL: {uniqueLink}</div> */}
+      <div className="count-text">Count: {totalCount}</div>
     </div>
   );
 };
