@@ -6,7 +6,7 @@ import RedirectedPage from './RedirectedPage';
 import Camera from './Camera';
 
 const App = () => {
-  const uniqueLink = 'http://localhost:3000/redirected';
+  const uniqueLink = 'https://ayush4460.github.io/';
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
