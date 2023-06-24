@@ -1,6 +1,6 @@
-# Snapchat-Filter-Backend
+# Snapchat-Face-Filter-Backend
 
-Welcome to the backend repository of the "Filter-Selector" project! This repository contains the backend code that complements the main "Filter-Selector" repository.
+Welcome to the backend repository of the "Snapchat-Face-Filter" project! This repository contains the backend code that complements the main "Snapchat-Face-Filter" repository.
 
 
 ## Prerequisites
