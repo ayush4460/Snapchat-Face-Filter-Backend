@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+//API to Take Pictures
 app.get('/api/take_picture/:deviceId', (req, res) => {
   const deviceId = req.params.deviceId;
   const socket = clients[deviceId];
@@ -72,6 +73,7 @@ app.get('/api/take_picture/:deviceId', (req, res) => {
   res.sendStatus(200);
 });
 
+//API to Change Filters
 app.get('/api/filter/:deviceId/:filterId', (req, res) => {
   const deviceId = req.params.deviceId;
   const filterId = req.params.filterId;
@@ -92,6 +94,7 @@ app.get('/api/filter/:deviceId/:filterId', (req, res) => {
   res.sendStatus(200);
 });
 
+//API to get the Latest Image
 app.get('/api/images/:fileName', (req, res) => {
   const imageDirectory = path.join(__dirname, 'images');
 
