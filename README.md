@@ -85,7 +85,7 @@ This project is licensed under the [MIT LICENSE](LICENSE).
 
 ## Security Policy
 
-Go through the [Security Policy](SECURITY) of this Project
+Go through the [Security Policy](SECURITY.md) of this Project
 
 
 ## Deployment
