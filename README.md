@@ -20,7 +20,7 @@ Before running the project, make sure you have the following installed:
     - Run the Command `git clone https://github.com/ayush4460/Snapchat-Filter-Backend.git` in the Terminal
     - Git will start cloning the repository to your local machine -> Cloning into `Snapchat-Filter-Backend...`
     - Once the cloning process is complete, you will have a local copy of the repository in the specified directory.
-    - Navigate to the project directory: `cd Snapchat-Filter-Backend`
+    - Navigate to the project directory: `cd Snapchat-Face-Filter-Backend`
     - Install the dependencies: In my case, no need to install dependencies.<br>
                                 Still facing issues with the dependencies, run the following command in the terminal:<br>
                                 `npm i cors express nodemon socket.io`
