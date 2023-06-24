@@ -79,6 +79,11 @@ Steps for Contributing:-
 This project is licensed under the [MIT LICENSE](LICENSE).
 
 
+## Community Guidlines( Code of Conduct )
+
+[Code of Conduct](CODE_OF_CONDUCT.md)
+
+
 ## Deployment
 
 The backend server is currently deployed and accessible at:
