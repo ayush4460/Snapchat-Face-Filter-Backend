@@ -84,6 +84,11 @@ This project is licensed under the [MIT LICENSE](LICENSE).
 [Code of Conduct](CODE_OF_CONDUCT.md)
 
 
+## Security Policy
+
+Go Through the [Security Policy](SECURITY) for this Project
+
+
 ## Deployment
 
 The backend server is currently deployed and accessible at:
