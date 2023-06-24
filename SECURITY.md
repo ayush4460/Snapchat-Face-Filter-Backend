@@ -2,8 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This project follows a versioning scheme for providing security updates. The following versions are currently being supported:
 
 | Dependency   | Version    | Supported          |
 | ------------ | ---------- | ------------------ |
@@ -28,3 +27,4 @@ To report a vulnerability, please follow these steps:
 6) We appreciate your responsible disclosure and cooperation in helping to ensure the security of the project.
 <br>
 Thank you for your contribution to the security of our project!
+Feel free to adjust the versions and add any additional information as needed.
