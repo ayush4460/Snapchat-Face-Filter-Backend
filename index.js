@@ -48,6 +48,7 @@ io.on('connection', (socket) => {
   });
 });
 
+//API
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
